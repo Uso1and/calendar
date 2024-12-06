@@ -15,12 +15,12 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PostMapping
+    @PostMapping("/create")
     public User createUser(@RequestBody User user) {
         return userService.createUser(user);
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public List<User> getAllUsers() {
         return userService.findAllUsers();
     }
@@ -29,6 +29,4 @@ public class UserController {
     public Optional<User> getUserById(@PathVariable Long id) {
         return userService.findUserById(id);
     }
-
-    
 }

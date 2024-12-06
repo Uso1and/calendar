@@ -1,4 +1,8 @@
+package com.example.demo.entity;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
@@ -8,12 +12,12 @@ public class Calendar {
     private Long id;
     private String title;
 
-    public Calendar(){
+    public Calendar() {
         super();
     }
 
     public Calendar(Long id, String title) {
-        this.id = id;
+        this.id = id; 
         this.title = title;
     }
 
@@ -32,5 +36,4 @@ public class Calendar {
     public void setTitle(String title) {
         this.title = title;
     }
-    
 }
