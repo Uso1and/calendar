@@ -9,11 +9,11 @@ public class Day {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private int dayNumber; // Номер дня в месяце
+    private int dayNumber; 
 
     @ManyToOne
     @JoinColumn(name = "month_id")
-    private Month month; // Месяц, которому принадлежит день
+    private Month month;
 
     public Day() {
     }

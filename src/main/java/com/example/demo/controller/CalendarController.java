@@ -17,7 +17,7 @@ public class CalendarController {
     @Autowired
     private CalendarService calendarService;
 
-    // Endpoints для Year
+    
     @PostMapping("/years")
     public Year createYear(@RequestParam int yearNumber) {
         return calendarService.createYear(yearNumber);
@@ -33,7 +33,7 @@ public class CalendarController {
         return calendarService.getAllYears();
     }
 
-    // Endpoints для Month
+   
     @PostMapping("/months")
     public Month createMonth(@RequestParam String name, @RequestParam Long yearId) {
         Optional<Year> year = calendarService.getYearById(yearId);
@@ -50,7 +50,7 @@ public class CalendarController {
         return calendarService.getAllMonths();
     }
 
-    // Endpoints для Day
+   
     @PostMapping("/days")
     public Day createDay(@RequestParam int dayNumber, @RequestParam Long monthId) {
         Optional<Month> month = calendarService.getMonthById(monthId);

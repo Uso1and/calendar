@@ -10,10 +10,10 @@ public class Year {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private int yearNumber; // Номер года
+    private int yearNumber; 
 
     @OneToMany(mappedBy = "year", cascade = CascadeType.ALL)
-    private List<Month> months; // Месяцы, принадлежащие году
+    private List<Month> months; 
 
     public Year() {
     }

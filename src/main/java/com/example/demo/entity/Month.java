@@ -10,14 +10,14 @@ public class Month {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name; // Название месяца
+    private String name; 
 
     @OneToMany(mappedBy = "month", cascade = CascadeType.ALL)
-    private List<Day> days; // Дни, принадлежащие месяцу
+    private List<Day> days; 
 
     @ManyToOne
     @JoinColumn(name = "year_id")
-    private Year year; // Год, которому принадлежит месяц
+    private Year year; 
 
     public Month() {
     }

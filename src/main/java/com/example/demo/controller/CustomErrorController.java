@@ -10,7 +10,7 @@ public class CustomErrorController implements ErrorController {
 
     @GetMapping("/error")
     public String handleError() {
-        // Вернуть кастомный шаблон ошибки
-        return "error"; // Убедитесь, что у вас есть error.html в папке templates
+        
+        return "error"; 
     }
 }

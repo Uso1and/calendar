@@ -33,7 +33,7 @@ public class LoginController {
             model.addAttribute("user", authenticatedUser);
             List<Day> days = calendarService.getAllDays();
             model.addAttribute("days", days);
-            return "welcome"; // Ensure "welcome" is mapped correctly in your application
+            return "welcome"; 
         } else {
             model.addAttribute("error", "Имя или email неверны");
             return "login";

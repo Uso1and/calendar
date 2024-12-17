@@ -24,7 +24,7 @@ public class CalendarService {
     @Autowired
     private YearRepository yearRepository;
 
-    // Методы для работы с Year
+    
     public Year createYear(int yearNumber) {
         Year year = new Year(yearNumber);
         return yearRepository.save(year);
@@ -38,7 +38,7 @@ public class CalendarService {
         return yearRepository.findAll();
     }
 
-    // Методы для работы с Month
+   
     public Month createMonth(String name, Year year) {
         Month month = new Month(name, year);
         return monthRepository.save(month);
@@ -52,7 +52,7 @@ public class CalendarService {
         return monthRepository.findAll();
     }
 
-    // Методы для работы с Day
+   
     public Day createDay(int dayNumber, Month month) {
         Day day = new Day(dayNumber, month);
         return dayRepository.save(day);

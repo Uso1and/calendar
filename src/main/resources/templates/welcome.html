@@ -17,12 +17,12 @@
     document.addEventListener('DOMContentLoaded', function () {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'dayGridMonth', // Тип начального представления
+            initialView: 'dayGridMonth', 
             events: [
-                // Здесь вы можете добавить события, если они у вас есть
+                
                 { title: 'Событие', start: '2024-12-17', end: '2024-12-18' }
             ]
-            // Настройте дополнительные параметры здесь
+            
         });
         calendar.render();
     });
